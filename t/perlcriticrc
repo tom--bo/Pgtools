@@ -1,0 +1,8 @@
+only = 1
+include = CodeLayout::ProhibitHardTabs RequireUserStrict RequireUseWarnings
+
+[CodeLayout::ProhibitHardTabs]
+# dont use hard tabs
+allow_leading_tabs = 0
+
+

@@ -12,11 +12,11 @@ Pgtools is ...
 
 # LICENSE
 
-Copyright (C) tom--bo.
+Copyright (C) Otsuka Tomoaki.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
 # AUTHOR
 
-tom--bo &lt;otsuka.t.2013@gmail.com>
+Otsuka Tomoaki &lt;otsuka.t.2013@gmail.com>
