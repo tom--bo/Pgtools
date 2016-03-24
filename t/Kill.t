@@ -35,7 +35,7 @@ isa_ok($k, "Kill");
 
 # DB mock
 my @data1 = (        
-    ['datname', 'pid', 'backend_start', 'state', 'query'],
+    ['datname', 'pid', 'query_start', 'state', 'query'],
     ['postgres', 2234, '2016-03-12 11:52:42.400975+00', 'idle', 'select * from actor;'],
     ['postgres', 2834, '2016-03-12 11:53:42.400975+00', 'idle', 'SELECT * from actor limit 3;'],
     ['postgres', 1234, '2016-03-12 11:54:42.400975+00', 'idle', 'INSERT INTO actor values(1,1,1);'],
@@ -53,7 +53,7 @@ my $ret = $k->search_queries($mock_db);
 # print Dumper $ret;
 
 is($ret->{2234}->{state}, 'idle');
-is($ret->{2234}->{backend_start}, '2016-03-12 11:52:42.400975+00');
+is($ret->{2234}->{query_start}, '2016-03-12 11:52:42.400975+00');
 is($ret->{2234}->{datname}, 'postgres');
 is($ret->{2234}->{query}, 'select * from actor;');
 is($ret->{2234}->{pid}, 2234);
