@@ -5,15 +5,10 @@ use strict;
 use warnings;
 use DBI;
 use Getopt::Long qw(:config posix_default no_ignore_case gnu_compat);
-use DateTime;
-use DateTime::Format::Strptime;
-use Perl6::Slurp;
-use JSON::XS;
+use Pgtools;
 use Pgtools::Config_diff;
-use Pgtools::Connection;
-use Pgtools::Conf;
 
-our $VERSION = '0.01';
+our $VERSION = Pgtools->VERSION;
 $| = 1; # auto-flush STDOUT
 
 my $help = 0;
