@@ -1,5 +1,4 @@
 #!/usr/bin/env perl
-package Pgtools::pg_kill;
 
 use 5.021;
 use strict;
@@ -7,8 +6,8 @@ use warnings;
 use Getopt::Long qw(:config posix_default no_ignore_case gnu_compat);
 use Perl6::Slurp;
 use JSON::XS;
-use Mod::Kill;
-use Mod::Connection;
+use Pgtools::Kill;
+use Pgtools::Connection;
 
 our $VERSION = '0.0.1';
 $| = 1; # auto-flush STDOUT

@@ -1,6 +1,8 @@
 package Fingerprint;
 use strict;
 use warnings;
+use parent qw(Class::Accessor);
+Fingerprint->mk_accessors(qw(file query));
 
 use File::Spec;
 

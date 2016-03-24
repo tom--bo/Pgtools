@@ -5,6 +5,8 @@ use warnings;
 use Connection;
 use Conf;
 use List::MoreUtils qw(uniq);
+use parent qw(Class::Accessor);
+Config_diff->mk_accessors(qw(argv));
 
 sub exec {
     my $self = shift;

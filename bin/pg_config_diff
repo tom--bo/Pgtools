@@ -1,5 +1,4 @@
 #!/usr/bin/env perl
-package Pgtools::pg_config_diff;
 
 use 5.021;
 use strict;
@@ -10,9 +9,9 @@ use DateTime;
 use DateTime::Format::Strptime;
 use Perl6::Slurp;
 use JSON::XS;
-use Mod::Config_diff;
-use Mod::Connection;
-use Mod::Conf;
+use Pgtools::Config_diff;
+use Pgtools::Connection;
+use Pgtools::Conf;
 
 our $VERSION = '0.01';
 $| = 1; # auto-flush STDOUT
@@ -37,7 +36,7 @@ if (@ARGV < 2) {
     die "Insufficient arguments.\nPlease check pg_config_diff -help\n";
 }
 
-my $s = Config_diff->new();
+my $s = Config_diff->new({"argv" => \@ARGV});
 $s->exec();
 
 sub print_help {

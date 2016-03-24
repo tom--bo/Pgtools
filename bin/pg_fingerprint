@@ -1,11 +1,10 @@
 #!/usr/bin/env perl
-package Pgtools::pg_finger_print;
 
 use 5.021;
 use strict;
 use warnings;
 use Getopt::Long qw(:config posix_default no_ignore_case gnu_compat);
-use Mod::Fingerprint;
+use Pgtools::Fingerprint;
 
 our $VERSION = '0.0.1';
 $| = 1;

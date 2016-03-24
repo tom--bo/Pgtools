@@ -42,6 +42,15 @@
       },
       "runtime" : {
          "requires" : {
+            "DBD::Pg" : "0",
+            "DBI" : "0",
+            "DateTime" : "0",
+            "DateTime::Format::Strptime" : "0",
+            "File::Spec" : "0",
+            "JSON::XS" : "0",
+            "Perl6::Slurp" : "0",
+            "Test::MockObject" : "0",
+            "Test::More" : "0",
             "perl" : "5.021001"
          }
       },
@@ -52,5 +61,19 @@
       }
    },
    "release_status" : "unstable",
-   "version" : "0.01"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/tom--bo/Pgtools/issues"
+      },
+      "homepage" : "https://github.com/tom--bo/Pgtools",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/tom--bo/Pgtools.git",
+         "web" : "https://github.com/tom--bo/Pgtools"
+      }
+   },
+   "version" : "0.01",
+   "x_contributors" : [
+      "tom--bo <otsuka.t.2013@gmail.com>"
+   ]
 }
