@@ -4,8 +4,8 @@ use warnings;
 use Test::More;
 use Data::Dumper;
 
-use_ok('Mod::Conf');
-use Mod::Conf;
+use_ok('Pgtools::Conf');
+use Pgtools::Conf;
 
 my $dummy = {
     "version" => "0.0.1",

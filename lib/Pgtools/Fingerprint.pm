@@ -3,8 +3,6 @@ use strict;
 use warnings;
 
 use File::Spec;
-use Data::Dumper;
-use parent qw(Class::Accessor);
 
 sub exec {
     my ($self, $query, $filename) = @_;
@@ -16,8 +14,8 @@ sub exec {
     }
     $filename = File::Spec->rel2abs($filename);
 
-    open(IN, $filename) or die "$!";
-    while(<IN>) {
+    open(my $in, '<', $filename) or die "$!";
+    while(<$in>) {
         chomp $_;
         $_ = &symbolize_query($self, $_);
         &print_queries($self, $_);

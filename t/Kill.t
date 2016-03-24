@@ -6,8 +6,8 @@ use Test::MockObject;
 use DBI;
 use Data::Dumper;
 
-use_ok('Mod::Kill');
-use Mod::Kill;
+use_ok('Pgtools::Kill');
+use Pgtools::Kill;
 
 my $opt = {
     "help"                   => 0,

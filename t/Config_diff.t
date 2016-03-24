@@ -6,8 +6,8 @@ use Test::MockObject;
 use Data::Dumper;
 use DBI;
 
-use_ok('Mod::Config_diff');
-use Mod::Config_diff;
+use_ok('Pgtools::Config_diff');
+use Pgtools::Config_diff;
 
 my @args = ("192.168.33.21:5432:postgres::", "192.168.33.22:5432:postgres::");
 my $s = Config_diff->new({"argv" => \@ARGV});

@@ -6,8 +6,8 @@ use Test::MockObject;
 use Data::Dumper;
 use DBI;
 
-use_ok('Mod::Fingerprint');
-use Mod::Fingerprint;
+use_ok('Pgtools::Fingerprint');
+use Pgtools::Fingerprint;
 
 {
 my $filename = "";

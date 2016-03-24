@@ -5,8 +5,8 @@ use Test::More;
 use Test::Exception;
 use Data::Dumper;
 
-use_ok('Mod::Connection');
-use Mod::Connection;
+use_ok('Pgtools::Connection');
+use Pgtools::Connection;
 
 my $default = {
     "host"     => "localhost",
@@ -68,4 +68,3 @@ dies_ok {$s6->setArgs("postgres-db.com,15432,pguser,,db1,")} 'expect to die';
 
 
 done_testing;
-

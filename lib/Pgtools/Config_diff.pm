@@ -2,10 +2,9 @@ package Config_diff;
 use strict;
 use warnings;
 
-use Mod::Connection;
-use Mod::Conf;
+use Connection;
+use Conf;
 use List::MoreUtils qw(uniq);
-use parent qw(Class::Accessor);
 
 sub exec {
     my $self = shift;

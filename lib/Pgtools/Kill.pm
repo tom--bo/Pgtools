@@ -5,8 +5,8 @@ use DateTime;
 use DateTime::Format::Strptime;
 use DBI;
 
-use Mod::Connection;
-use Mod::Query;
+use Connection;
+use Query;
 use parent qw(Class::Accessor);
 Kill->mk_accessors(qw(help ignore_match_query ignore_match_state ignore_query_user_name kill match_query match_state print query_user_name run_time version));
 
