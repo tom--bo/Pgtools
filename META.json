@@ -49,13 +49,12 @@
             "File::Spec" : "0",
             "JSON::XS" : "0",
             "Perl6::Slurp" : "0",
-            "Test::MockObject" : "0",
-            "Test::More" : "0",
             "perl" : "5.021001"
          }
       },
       "test" : {
          "requires" : {
+            "Test::MockObject" : "0",
             "Test::More" : "0.98"
          }
       }
