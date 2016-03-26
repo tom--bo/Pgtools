@@ -122,7 +122,7 @@ Pgtools::pg_kill - kill the postgresql processes with option
 
 =head1 SYNOPSIS
 
-    pg_kill shows the specified queries during execution by regular expression and the other options.
+    pg_kill shows the specified queries during execution by regular expression and other options.
     And also kill these specifid queries by -kill option.
 
   Options:
