@@ -28,11 +28,11 @@ is($s->{password}, "");
 is($s->{database}, "postgres");
 
 # ///////////////
-# setArgs
+# set_args
 # ///////////////
 
 my $s1 = Connection->new($default);
-$s1->setArgs("192.168.33.21,5432,postgres,,");
+$s1->set_args("192.168.33.21,5432,postgres,,");
 is($s1->{host}, "192.168.33.21");
 is($s1->{port}, 5432);
 is($s1->{user}, "postgres");
@@ -40,7 +40,7 @@ is($s1->{password}, "");
 is($s1->{database}, "postgres");
 
 my $s2 = Connection->new($default);
-$s2->setArgs(",,postgres,password,");
+$s2->set_args(",,postgres,password,");
 is($s2->{host}, "localhost");
 is($s2->{port}, 5432);
 is($s2->{user}, "postgres");
@@ -48,7 +48,7 @@ is($s2->{password}, "password");
 is($s2->{database}, "postgres");
 
 my $s3 = Connection->new($default);
-$s3->setArgs("postgres-db.com,15432,pguser,,db1");
+$s3->set_args("postgres-db.com,15432,pguser,,db1");
 is($s3->{host}, "postgres-db.com");
 is($s3->{port}, 15432);
 is($s3->{user}, "pguser");
@@ -56,13 +56,13 @@ is($s3->{password}, "");
 is($s3->{database}, "db1");
 
 my $s4 = Connection->new($default);
-dies_ok {$s4->setArgs("postgres-db.com,15432,pguser,db1")} 'expect to die';
+dies_ok {$s4->set_args("postgres-db.com,15432,pguser,db1")} 'expect to die';
 
 my $s5 = Connection->new($default);
-dies_ok {$s5->setArgs("")} 'expect to die';
+dies_ok {$s5->set_args("")} 'expect to die';
 
 my $s6 = Connection->new($default);
-dies_ok {$s6->setArgs("postgres-db.com,15432,pguser,,db1,")} 'expect to die';
+dies_ok {$s6->set_args("postgres-db.com,15432,pguser,,db1,")} 'expect to die';
 
 
 

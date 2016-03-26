@@ -5,7 +5,7 @@ use warnings;
 use parent qw(Class::Accessor);
 Connection->mk_accessors(qw(dbh host port user password database));
 
-sub setArgs {
+sub set_args {
     my $self = shift;
     my ($option) = @_;
     my @tmp = split(/,/, $option, -1);

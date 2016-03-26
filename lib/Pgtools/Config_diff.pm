@@ -18,11 +18,11 @@ sub exec {
         "database" => "postgres"
     };
     my @dbs, my @confs;
-    my $db_cnt = @ARGV;
+    my $db_cnt = scalar(@{$self->argv});
 
     for(my $i=0; $i<$db_cnt; $i++) {
         my $db = Connection->new($default);
-        $db->setArgs($ARGV[$i]);
+        $db->setArgs($self->argv->[$i]);
         $db->create_connection();
 
         my $c = get_db_config($self, $db);

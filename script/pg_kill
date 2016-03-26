@@ -54,7 +54,7 @@ if (@ARGV != 1) {
 }
 
 my $s = Kill->new($opt);
-$s->exec();
+$s->exec($ARGV[0]);
 
 
 sub print_help {

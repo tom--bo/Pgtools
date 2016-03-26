@@ -17,7 +17,7 @@ our $qt_format = DateTime::Format::Strptime->new(
 our $start_time = DateTime->now( time_zone => 'Asia/Tokyo' );
 
 sub exec {
-    my $self = shift;
+    my ($self, $arg) = @_;
     my $default = {
         "host"     => "localhost",
         "port"     => "5432",
@@ -27,7 +27,7 @@ sub exec {
     };
 
     my $db = Connection->new($default);
-    $db->setArgs(shift @ARGV);
+    $db->set_args($arg);
     $db->create_connection();
 
     # return hash reference
@@ -38,8 +38,8 @@ sub exec {
     }
     if($self->kill){
         &kill_queries($db, $self, $queries);
+        print "Killed matched queries!\n";
     }
-    print "Killed matched queries!\n";
 
     $db->dbh->disconnect;
 }
