@@ -17,7 +17,6 @@ my $default = {
 };
 
 my $s = Connection->new($default);
-
 ok $s;
 isa_ok($s, "Connection");
 
