@@ -8,7 +8,7 @@ use DBI;
 use Connection;
 use Query;
 use parent qw(Class::Accessor);
-Kill->mk_accessors(qw(help ignore_match_query ignore_match_state ignore_query_user_name kill match_query match_state print query_user_name run_time version));
+Kill->mk_accessors(qw(help ignore_match_query ignore_match_state kill match_query match_state print run_time version));
 
 our ($now, $qt);
 our $qt_format = DateTime::Format::Strptime->new(

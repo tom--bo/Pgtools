@@ -15,12 +15,10 @@ my $opt = {
     "help"                   => 0,
     "ignore_match_query"     => '',
     "ignore_match_state"     => '',
-    "ignore_query_user_name" => '',
     "kill"                   => '',
     "match_query"            => '',
     "match_state"            => '',
     "print"                  => 0,
-    "query_user_name"        => '',
     "run_time"               => 0,
     "version"                => 0,
 };
@@ -29,12 +27,10 @@ GetOptions(
     'help|h'                     => \$opt->{help},
     "ignore_match_query|imq=s"   => \$opt->{ignore_match_query},
     "ignore_match_state|ims=s"   => \$opt->{ignore_match_state},
-    "ignore_query_user_name|iun=s" => \$opt->{ignore_query_user_name},
     'kill'                       => \$opt->{kill},
     'match_query|mq=s'           => \$opt->{match_query},
     'match_state|ms=s'           => \$opt->{match_state},
     'print|pr'                   => \$opt->{print},
-    'query_user_name|un=s'       => \$opt->{query_user_name},
     'run_time|r=i'               => \$opt->{run_time},
     'version|v'                  => \$opt->{version},
 );
@@ -76,7 +72,6 @@ sub print_help {
     -pr  print:          print killed queries info
     -p   passward:       set password
     -port:               port number
-    -query_user_name:     user who exec query
     -r   run_time:       execute time 
     -u   user:           Postgres user name 
     -v   version:        version
@@ -137,7 +132,6 @@ Pgtools::pg_kill - kill the postgresql processes with option
     -pr  print:          print killed queries info
     -p   passward:       set password
     -port:               port number
-    -query_user_name:     user who exec query
     -r   run_time:       execute time 
     -u   user:           Postgres user name 
     -v   version:        version
