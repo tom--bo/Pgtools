@@ -99,7 +99,7 @@ sub search_queries {
         }
         if($self->run_time != 0) {
             $qt = $qt_format->parse_datetime($row{query_start});
-            $qt->set_time_zone('Asia/Tokyo');
+            $qt->set_time_zone('local');
             my $diff = $start_time->epoch() - $qt->epoch();
             if($diff < $self->run_time) {
                 next;
