@@ -42,12 +42,12 @@
       },
       "runtime" : {
          "requires" : {
-            "DBD::Pg" : "0",
-            "DBI" : "0",
-            "DateTime" : "0",
-            "DateTime::Format::Strptime" : "0",
+            "DBD::Pg" : "3.5",
+            "DBI" : "1.6",
+            "DateTime" : "1.2",
+            "DateTime::Format::Strptime" : "1.6",
             "File::Spec" : "0",
-            "JSON::XS" : "0",
+            "JSON::XS" : "3.2",
             "Perl6::Slurp" : "0",
             "perl" : "5.021001"
          }

@@ -9,7 +9,7 @@ use DBI;
 use_ok('Pgtools::Fingerprint');
 use Pgtools::Fingerprint;
 
-subtest 'fingerprint' => {
+subtest 'fingerprint' => sub {
     my $filename = "";
     my $query = "SELECT * from users where id = 100";
     my $s = Fingerprint->new();

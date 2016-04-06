@@ -5,11 +5,11 @@ on 'test' => sub {
     requires 'Test::MockObject';
 };
 
-requires 'DBI';
-requires 'DBD::Pg';
-requires 'DateTime';
-requires 'DateTime::Format::Strptime';
+requires 'DBI', '1.6';
+requires 'DBD::Pg', '3.5';
+requires 'DateTime', '1.2';
+requires 'DateTime::Format::Strptime', '1.6';
 requires 'Perl6::Slurp';
-requires 'JSON::XS';
+requires 'JSON::XS', '3.2';
 requires 'File::Spec';
 

@@ -21,7 +21,7 @@ isa_ok($s, "Config_diff");
 # ///////////////
 
 # DB mock
-subtest 'DB mock' => {
+subtest 'DB mock' => sub {
     my @data_conf = (        
         ['name', 'setting'],
         ['max_connections', 50],
@@ -41,6 +41,7 @@ subtest 'DB mock' => {
     is($ret->{shared_buffers}, 32276);
     is($ret->{tcp_keepalives_idle}, 3);
     is($ret->{wal_buffers}, 1024);
+    done_testing;
 };
 
 # ///////////////
@@ -48,7 +49,7 @@ subtest 'DB mock' => {
 # ///////////////
 
 # DB mock
-subtest 'version' => {
+subtest 'version' => sub {
     my @data_version = (        
         ['version'],
         ['PostgreSQL 9.3.9 on x86_64-unknown-linux-gnu, compiled by gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-4), 64-bit']
@@ -62,6 +63,7 @@ subtest 'version' => {
     my $ret = $s->get_db_version($mock_db);
 
     is($ret, '9.3.9');
+    done_testing;
 };
 
 
