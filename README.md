@@ -5,29 +5,29 @@ Pgtools - It's a yet another command-line tool for PostgreSQL operation.
 # SYNOPSIS
 
 ## pg\_kill
-  $ pg\_kill -kill -print -mq "like\\s'\\%.\*\\%'" "192.168.32.12,5432,postgres,,dvdrental"
-  -------------------------------
-  Killed-pid: 11590
-  At        : 2016/03/21 01:32:29
-  Query     : SELECT \* FROM actor WHERE last\_name like '%a%';
-  Killed matched queries!
+    $ pg\_kill -kill -print -mq "like\\s'\\%.\*\\%'" "192.168.32.12,5432,postgres,,dvdrental"
+    -------------------------------
+    Killed-pid: 11590
+    At        : 2016/03/21 01:32:29
+    Query     : SELECT \* FROM actor WHERE last\_name like '%a%';
+    Killed matched queries!
 
 ## pg\_config\_diff
-  $ pg\_config\_diff  "192.168.33.21,5432,postgres,," "192.168.33.22,,,," "192.168.33.23,5432,postgres,,dvdrental"
-  <Setting Name>           192.168.33.21           192.168.33.22           192.168.33.23
-  --------------------------------------------------------------------------------------------
-  max\_connections          50                      100                     100
-  shared\_buffers           32768                   16384                   65536
-  tcp\_keepalives\_idle      8000                    7200                    10000
-  tcp\_keepalives\_interval  75                      75                      10
-  wal\_buffers              1024                    512                     2048
+    $ pg\_config\_diff  "192.168.33.21,5432,postgres,," "192.168.33.22,,,," "192.168.33.23,5432,postgres,,dvdrental"
+    <Setting Name>           192.168.33.21           192.168.33.22           192.168.33.23
+    --------------------------------------------------------------------------------------------
+    max\_connections          50                      100                     100
+    shared\_buffers           32768                   16384                   65536
+    tcp\_keepalives\_idle      8000                    7200                    10000
+    tcp\_keepalives\_interval  75                      75                      10
+    wal\_buffers              1024                    512                     2048
 
 ## pg\_fingerprint
-  $ pg\_fingerprint queries\_file
-  SELECT \* FROM user WHERE id = ?;
-  SELECT \* FROM user2 WHERE id = ? LIMIT ?;
-  SELECT \* FROM user2 WHERE point = ?;
-  SELECT \* FROM user2 WHERE expression IS ?;
+    $ pg\_fingerprint queries\_file
+    SELECT \* FROM user WHERE id = ?;
+    SELECT \* FROM user2 WHERE id = ? LIMIT ?;
+    SELECT \* FROM user2 WHERE point = ?;
+    SELECT \* FROM user2 WHERE expression IS ?;
 
 # DESCRIPTION
 
