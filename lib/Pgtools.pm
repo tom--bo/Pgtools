@@ -16,7 +16,7 @@ Pgtools - It's a yet another command-line tool for PostgreSQL operation.
 
 =head1 SYNOPSIS
 
- ## pg_kill
+=head2 pg_kill
   $ pg_kill -kill -print -mq "like\s'\%.*\%'" "192.168.32.12,5432,postgres,,dvdrental"
   -------------------------------
   Killed-pid: 11590
@@ -25,7 +25,7 @@ Pgtools - It's a yet another command-line tool for PostgreSQL operation.
   Killed matched queries!
 
 
- ## pg_config_diff
+=head2 pg_config_diff
   $ pg_config_diff  "192.168.33.21,5432,postgres,," "192.168.33.22,,,," "192.168.33.23,5432,postgres,,dvdrental"
   <Setting Name>           192.168.33.21           192.168.33.22           192.168.33.23
   --------------------------------------------------------------------------------------------
@@ -36,7 +36,7 @@ Pgtools - It's a yet another command-line tool for PostgreSQL operation.
   wal_buffers              1024                    512                     2048
 
 
- ## pg_fingerprint
+=head2 pg_fingerprint
   $ pg_fingerprint queries_file
   SELECT * FROM user WHERE id = ?;
   SELECT * FROM user2 WHERE id = ? LIMIT ?;
