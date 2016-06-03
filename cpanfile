@@ -6,10 +6,10 @@ on 'test' => sub {
 };
 
 requires 'DBI', '1.6';
-requires 'DBD::Pg', '3.5';
+requires 'DBD::Pg', '3.5.3';
 requires 'DateTime', '1.2';
 requires 'DateTime::Format::Strptime', '1.6';
 requires 'Perl6::Slurp';
-requires 'JSON::XS', '3.2';
+requires 'JSON::XS', '3.0';
 requires 'File::Spec';
 
