@@ -5,8 +5,8 @@ use DateTime;
 use DateTime::Format::Strptime;
 use DBI;
 
-use Connection;
-use Query;
+use Pgtools::Connection;
+use Pgtools::Query;
 use parent qw(Class::Accessor);
 Kill->mk_accessors(qw(help ignore_match_query ignore_match_state kill match_query match_state print run_time version));
 

@@ -2,8 +2,8 @@ package Config_diff;
 use strict;
 use warnings;
 
-use Connection;
-use Conf;
+use Pgtools::Connection;
+use Pgtools::Conf;
 use List::MoreUtils qw(uniq);
 use parent qw(Class::Accessor);
 Config_diff->mk_accessors(qw(argv));
