@@ -1,12 +1,13 @@
-package Config_diff;
+package Pgtools::Config_diff;
 use strict;
 use warnings;
 
-use Pgtools::Connection;
+use Pgtools;
 use Pgtools::Conf;
+use Pgtools::Connection;
 use List::MoreUtils qw(uniq);
 use parent qw(Class::Accessor);
-Config_diff->mk_accessors(qw(argv));
+__PACKAGE__->mk_accessors(qw(argv));
 
 sub exec {
     my $self = shift;
@@ -21,7 +22,7 @@ sub exec {
     my $db_cnt = scalar(@{$self->argv});
 
     for(my $i=0; $i<$db_cnt; $i++) {
-        my $db = Connection->new($default);
+        my $db = Pgtools::Connection->new($default);
         $db->set_args($self->argv->[$i]);
         $db->create_connection();
 
@@ -29,11 +30,11 @@ sub exec {
         my $v = get_db_version($self, $db);
         my $obj = {
             "version" => $v,
-            "items"   => $c 
+            "items"   => $c
         };
 
         push(@dbs, $db);
-        push(@confs, Conf->new($obj));
+        push(@confs, Pgtools::Conf->new($obj));
 
         $db->dbh->disconnect;
     }

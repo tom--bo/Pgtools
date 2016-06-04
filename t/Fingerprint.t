@@ -12,10 +12,10 @@ use Pgtools::Fingerprint;
 subtest 'fingerprint' => sub {
     my $filename = "";
     my $query = "SELECT * from users where id = 100";
-    my $s = Fingerprint->new();
+    my $s = Pgtools::Fingerprint->new();
 
     ok $s;
-    isa_ok($s, "Fingerprint");
+    isa_ok($s, "Pgtools::Fingerprint");
 
     # ///////////////
     # symbolize_query

@@ -2,5 +2,3 @@ name = "Pgtools"
 # badges = ["travis"]
 module_maker="ModuleBuildTiny"
 
-[no_index]
-directory=['t', 'xt', 'inc', 'share', 'eg', 'examples', 'author', 'builder', 'lib/Pgtools']

@@ -28,12 +28,12 @@ if($version){
     exit;
 }
 
-if ((@ARGV < 1 && $query eq "") || (@ARGV > 1 && $query ne "")) {  
+if ((@ARGV < 1 && $query eq "") || (@ARGV > 1 && $query ne "")) {
     die "Insufficient arguments.\nPlease check pg_fingerprint -help\n";
 }
 my $filename = shift @ARGV;
 
-my $s = Fingerprint->new();
+my $s = Pgtools::Fingerprint->new();
 $s->exec($query, $filename);
 
 sub print_help {

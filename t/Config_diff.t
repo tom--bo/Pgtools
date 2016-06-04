@@ -10,10 +10,10 @@ use_ok('Pgtools::Config_diff');
 use Pgtools::Config_diff;
 
 my @args = ("192.168.33.21:5432:postgres::", "192.168.33.22:5432:postgres::");
-my $s = Config_diff->new({"argv" => \@ARGV});
+my $s = Pgtools::Config_diff->new({"argv" => \@ARGV});
 
 ok $s;
-isa_ok($s, "Config_diff");
+isa_ok($s, "Pgtools::Config_diff");
 
 
 # ///////////////
@@ -22,11 +22,11 @@ isa_ok($s, "Config_diff");
 
 # DB mock
 subtest 'DB mock' => sub {
-    my @data_conf = (        
+    my @data_conf = (
         ['name', 'setting'],
         ['max_connections', 50],
         ['shared_buffers', 32276],
-        ['tcp_keepalives_idle', 3], 
+        ['tcp_keepalives_idle', 3],
         ['wal_buffers', 1024]
     );
     my $dbh = DBI->connect('DBI:Mock:', '', '');
@@ -50,7 +50,7 @@ subtest 'DB mock' => sub {
 
 # DB mock
 subtest 'version' => sub {
-    my @data_version = (        
+    my @data_version = (
         ['version'],
         ['PostgreSQL 9.3.9 on x86_64-unknown-linux-gnu, compiled by gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-4), 64-bit']
     );

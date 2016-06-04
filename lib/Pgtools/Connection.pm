@@ -1,9 +1,9 @@
-package Connection;
+package Pgtools::Connection;
 use strict;
 use warnings;
 
 use parent qw(Class::Accessor);
-Connection->mk_accessors(qw(dbh host port user password database));
+__PACKAGE__->mk_accessors(qw(dbh host port user password database));
 
 sub set_args {
     my $self = shift;

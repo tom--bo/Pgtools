@@ -1,16 +1,17 @@
-package Kill;
+package Pgtools::Kill;
 use strict;
 use warnings;
 use DateTime;
 use DateTime::Format::Strptime;
 use DBI;
 
+use Pgtools;
 use Pgtools::Connection;
 use Pgtools::Query;
 use parent qw(Class::Accessor);
-Kill->mk_accessors(qw(help ignore_match_query ignore_match_state kill match_query match_state print run_time version));
+__PACKAGE__->mk_accessors(qw(help ignore_match_query ignore_match_state kill match_query match_state print run_time version));
 
-our ($now, $qt);
+our ($now, $qt) ;
 our $qt_format = DateTime::Format::Strptime->new(
     pattern => '%Y-%m-%d %H:%M:%S.%N'
 );
@@ -26,7 +27,7 @@ sub exec {
         "database" => "postgres"
     };
 
-    my $db = Connection->new($default);
+    my $db = Pgtools::Connection->new($default);
     $db->set_args($arg);
     $db->create_connection();
 
@@ -73,9 +74,9 @@ sub search_queries {
             query_start,
             state,
             query
-        FROM 
+        FROM
             pg_stat_activity
-        WHERE 
+        WHERE
             pid <> pg_backend_pid()
     ");
     $sth->execute();
@@ -105,7 +106,7 @@ sub search_queries {
                 next;
             }
         }
- 
+
         my $tmp = {
             "datname"         => $row{datname},
             "pid"             => $row{pid},
@@ -113,7 +114,7 @@ sub search_queries {
             "state"           => $row{state},
             "query"           => $row{query}
         };
-        my $q = Query->new($tmp);
+        my $q = Pgtools::Query->new($tmp);
         $queries = {%{$queries}, $row{pid} => $q};
     }
     $sth->finish;
