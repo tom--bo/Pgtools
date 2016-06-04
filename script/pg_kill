@@ -46,7 +46,7 @@ if($opt->{version}){
 }
 
 if (@ARGV != 1) {  
-    die "Invalid arguments.\nPlease check pg_config_diff -help\n";
+    die "Invalid arguments.\nPlease check pg_kill -help\n";
 }
 
 my $s = Kill->new($opt);
