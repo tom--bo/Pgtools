@@ -22,7 +22,7 @@ sub exec {
 
     for(my $i=0; $i<$db_cnt; $i++) {
         my $db = Connection->new($default);
-        $db->setArgs($self->argv->[$i]);
+        $db->set_args($self->argv->[$i]);
         $db->create_connection();
 
         my $c = get_db_config($self, $db);

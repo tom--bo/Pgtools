@@ -67,7 +67,7 @@ Pgtools::pg_config_diff - compare plural PostgreSQL settings.
 
 =head1 VERSION
 
-Version 0.001
+Version 0.002
 
 
 =head1 SYNOPSIS
