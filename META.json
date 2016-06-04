@@ -23,7 +23,7 @@
          "examples",
          "author",
          "builder",
-		 "lib/Pgtools"
+         "lib/Pgtools"
       ]
    },
    "prereqs" : {
