@@ -2,5 +2,7 @@ Revision history for Perl extension Pgtools
 
 {{$NEXT}}
 
-    - original version
+0.001 2016-06-04T04:14:43Z
+
+    - First version of Pgtools
 
