@@ -1,14 +1,14 @@
-package Fingerprint;
+package Pgtools::Fingerprint;
 use strict;
 use warnings;
 use parent qw(Class::Accessor);
-Fingerprint->mk_accessors(qw(file query));
+__PACKAGE__->mk_accessors(qw(file query));
 
 use File::Spec;
 
 sub exec {
     my ($self, $query, $filename) = @_;
-    
+
     if($query ne "") {
         $query = &symbolize_query($self, $query);
         &print_queries($self, $query);

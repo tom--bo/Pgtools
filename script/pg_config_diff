@@ -27,11 +27,11 @@ if($version){
     exit;
 }
 
-if (@ARGV < 2) {  
+if (@ARGV < 2) {
     die "Insufficient arguments.\nPlease check pg_config_diff -help\n";
 }
 
-my $s = Config_diff->new({"argv" => \@ARGV});
+my $s = Pgtools::Config_diff->new({"argv" => \@ARGV});
 $s->exec();
 
 sub print_help {
@@ -47,11 +47,11 @@ sub print_help {
     Args:
       This command needs more than 2 argument which is string to specify the PostgreSQL databases.
       1 argument should contain hostname, port, username, password, and database.
-      These should be separated by commas. 
+      These should be separated by commas.
       You can omit these pieces except hostname, and then you should insert no character between colons.
-      Default setting is applied when you omit argument pieces. 
+      Default setting is applied when you omit argument pieces.
       Default setting is ...
-        Hostname: localhost 
+        Hostname: localhost
         Port    : 5432
         Username: postgres
         Password: '' (empty)

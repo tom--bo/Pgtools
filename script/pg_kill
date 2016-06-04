@@ -6,7 +6,6 @@ use warnings;
 use Getopt::Long qw(:config posix_default no_ignore_case gnu_compat);
 use Pgtools;
 use Pgtools::Kill;
-use Pgtools::Connection;
 
 our $VERSION = Pgtools->VERSION;
 $| = 1; # auto-flush STDOUT
@@ -35,7 +34,7 @@ GetOptions(
     'version|v'                  => \$opt->{version},
 );
 
-# show help 
+# show help
 if($opt->{help}){
     &print_help;
     exit;
@@ -45,11 +44,11 @@ if($opt->{version}){
     exit;
 }
 
-if (@ARGV != 1) {  
+if (@ARGV != 1) {
     die "Invalid arguments.\nPlease check pg_kill -help\n";
 }
 
-my $s = Kill->new($opt);
+my $s = Pgtools::Kill->new($opt);
 $s->exec($ARGV[0]);
 
 

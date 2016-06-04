@@ -15,10 +15,10 @@ my $dummy = {
         "test3" => "3",
     }
 };
-my $c = Conf->new($dummy);
+my $c = Pgtools::Conf->new($dummy);
 
 ok $c;
-isa_ok($c, "Conf");
+isa_ok($c, "Pgtools::Conf");
 is($c->{version}, "0.0.1");
 is($c->{items}->{test1}, -1);
 is($c->{items}->{test2}, 2);

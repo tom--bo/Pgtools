@@ -22,11 +22,11 @@ subtest 'basic' => sub {
         "version"                => 0,
     };
 
-    my $k = Kill->new($opt);
+    my $k = Pgtools::Kill->new($opt);
     ok $k;
-    isa_ok($k, "Kill");
+    isa_ok($k, "Pgtools::Kill");
 
-    my @data1 = (        
+    my @data1 = (
         ['datname', 'pid', 'query_start', 'state', 'query'],
         ['postgres', 2234, '2016-03-12 11:52:42.400975+00', 'idle', 'select * from actor;'],
         ['postgres', 2834, '2016-03-12 11:53:42.400975+00', 'idle', 'SELECT * from actor limit 3;'],
@@ -72,9 +72,9 @@ subtest 'state(disabled)' => sub {
         "run_time"               => 0,
         "version"                => 0,
     };
-    my $k = Kill->new($opt);
+    my $k = Pgtools::Kill->new($opt);
 
-    my @data1 = (        
+    my @data1 = (
         ['datname', 'pid', 'query_start', 'state', 'query'],
         ['postgres', 2234, '2016-03-12 11:52:42.400975+00', 'idle', 'select * from actor;'],
         ['postgres', 2834, '2016-03-12 11:53:42.400975+00', 'disabled', 'SELECT * from actor limit 3;'],
@@ -111,9 +111,9 @@ subtest 'Same query in match_query & ignore_match_query' => sub {
         "run_time"               => 0,
         "version"                => 0,
     };
-    my $k = Kill->new($opt);
+    my $k = Pgtools::Kill->new($opt);
 
-    my @data1 = (        
+    my @data1 = (
         ['datname', 'pid', 'query_start', 'state', 'query'],
         ['postgres', 2234, '2016-03-12 11:52:42.400975+00', 'idle', 'select * from actor;'],
         ['postgres', 2834, '2016-03-12 11:53:42.400975+00', 'disabled', 'SELECT * from actor limit 3;'],
@@ -143,7 +143,7 @@ subtest 'runtime' => sub {
         "run_time"               => 30,
         "version"                => 0,
     };
-    my $k = Kill->new($opt);
+    my $k = Pgtools::Kill->new($opt);
 
     my @data1 = (
         ['datname', 'pid', 'query_start', 'state', 'query'],
