@@ -38,7 +38,7 @@ $s->exec($query, $filename);
 
 sub print_help {
     print <<OUT;
-    $0 [-hv] (-query arg1 | file_name)
+    pg_fingerprint [-hv] (-query arg1 | file_name)
 
     This command converts the values into a placeholders.
 
@@ -47,7 +47,9 @@ sub print_help {
       -version: show Pg-tools version.
       -query: spefy a query with command-line.
 
-    $ pg_fingerprint queries_file
+	(Example)
+
+    \$ pg_fingerprint queries_file
     SELECT * FROM user WHERE id = ?;
     SELECT * FROM user2 WHERE id = ? LIMIT ?;
     SELECT * FROM user2 WHERE point = ?;
