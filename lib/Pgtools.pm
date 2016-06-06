@@ -47,11 +47,11 @@ Pgtools - It's a yet another command-line tool for PostgreSQL operation.
 
 =head1 DESCRIPTION
 
-    Pgtools is composed of 3 commands which is pg_kill, pg_config_diff, pg_fingerprint.
+Pgtools is composed of 3 commands which is pg_kill, pg_config_diff, pg_fingerprint.
 
-    - pg_kill shows the specified queries during execution by regular expression and other options. And also kill these specifid queries by -kill option.
-    - pg_config_diff command needs more than 2 argument which is string to specify the PostgreSQL databases.
-    - pg_fingerprint command converts the values into a placeholders.
+- pg_kill shows the specified queries during execution by regular expression and other options. And also kill these specifid queries by -kill option.
+- pg_config_diff command needs more than 2 argument which is string to specify the PostgreSQL databases.
+- pg_fingerprint command converts the values into a placeholders.
 
 =head1 LICENSE
 
