@@ -71,8 +71,8 @@ sub print_help {
     -pr  print:          print killed queries info
     -p   passward:       set password
     -port:               port number
-    -r   run_time:       execute time 
-    -u   user:           Postgres user name 
+    -r   run_time:       execute time
+    -u   user:           Postgres user name
     -v   version:        version
 
     (Example)
