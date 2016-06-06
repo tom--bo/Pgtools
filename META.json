@@ -56,6 +56,15 @@
          "requires" : {
             "Test::MockObject" : "0",
             "Test::More" : "0.98"
+            "DBD::Pg" : "v3.5.3",
+            "DBI" : "1.6",
+            "DateTime" : "1.2",
+            "DateTime::Format::Strptime" : "1.6",
+            "File::Spec" : "0",
+            "JSON::XS" : "3.0",
+            "Perl6::Slurp" : "0",
+			"DBD::Mock" : "0",
+			"Test::Exception" : "0"
          }
       }
    },
