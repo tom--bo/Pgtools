@@ -42,6 +42,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Class::Accessor" : "0",
             "DBD::Pg" : "v3.5.3",
             "DBI" : "1.6",
             "DateTime" : "1.2",
@@ -54,6 +55,7 @@
       },
       "test" : {
          "requires" : {
+            "Class::Accessor" : "0",
             "DBD::Mock" : "0",
             "DBD::Pg" : "v3.5.3",
             "DBI" : "1.6",
