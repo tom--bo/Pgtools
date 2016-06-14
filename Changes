@@ -2,6 +2,9 @@ Revision history for Perl extension Pgtools
 
 {{$NEXT}}
 
+0.009 2016-06-14T13:59:23Z
+    - ver 0.09 fix #8
+
 0.008 2016-06-09T16:45:21Z
     - ver 0.08 as a test
 
